@@ -2,3 +2,8 @@ ORDS arrancando en segundo plano...
 Database Actions responde con HTTP 200
 COMMAND   PID     USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
 java    23525 alexrose    8u  IPv6 0xe49bc317b21cdc6a      0t0  TCP *:8080 (LISTEN)
+ORDS ya esta en marcha (sesion tmux 'ords').
+  comprobacion HTTP 1 de 30
+Database Actions responde con HTTP 200
+COMMAND   PID     USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+java    23525 alexrose    8u  IPv6 0xe49bc317b21cdc6a      0t0  TCP *:8080 (LISTEN)
