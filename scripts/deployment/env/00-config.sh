@@ -8,7 +8,7 @@ export CONT_NAME="oralab-26ai"
 export VOL_NAME="oralab-26ai-data"
 export IMG="container-registry.oracle.com/database/free:latest"
 export PORT_DB=1521
-export PORT_ORDS=8181
+export PORT_ORDS=8181  # Obsoleto: ORDS se ejecuta fuera del contenedor y escucha en el puerto 8080.
 export SERVICE_CDB="FREE"
 export SERVICE_PDB="FREEPDB1"
 BACKUP_DIR="$(pwd)/backups"
@@ -23,3 +23,8 @@ export ORDS_HOME="/opt/oracle/ords"
 export ORDS_CONFIG="/etc/ords/config"
 export ORDS_LOGS="/var/log/ords"
 export ORDS_PORT=8080
+
+# Lab 4: respaldo y evidencias
+export HELPER_IMG="ubuntu:24.04"
+export DATA_ROOT="/opt/oracle/oradata"
+export EVID_LAB4="docs/bitacora/lab4/evidencia"
