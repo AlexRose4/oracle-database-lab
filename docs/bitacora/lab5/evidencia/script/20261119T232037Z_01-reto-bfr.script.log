@@ -1,0 +1,16 @@
+=== Filas reales por bloque de PEDIDO ===
+
+BLOQUES_CON_FILAS     MINIMO	  MEDIA     MAXIMO TOTAL_FILAS
+----------------- ---------- ---------- ---------- -----------
+	     5220	   2	 191.57        200     1000000
+=== Comparacion con las estadisticas de la tabla ===
+
+  NUM_ROWS     BLOCKS FILAS_POR_BLOQUE
+---------- ---------- ----------------
+   1000000	 5320		187.97
+=== Estado del paquete de medida ===
+
+OBJECT_NAME															 OBJECT_TYPE		 STATUS
+-------------------------------------------------------------------------------------------------------------------------------- ----------------------- -------
+MEDIR																 PACKAGE		 VALID
+MEDIR																 PACKAGE BODY		 VALID
