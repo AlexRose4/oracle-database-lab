@@ -1,0 +1,8 @@
+=== Filas reales por bloque de PEDIDO ===
+  SELECT DBMS_ROWID.ROWID_BLOCK_NUMBER(ROWID, 'BIGFILE') AS bloque,
+                                       *
+ERROR at line 2:
+ORA-00979: "ROWID": must appear in the GROUP BY clause or be used in an aggregate function
+Help: https://docs.oracle.com/error-help/db/ora-00979/
+
+
