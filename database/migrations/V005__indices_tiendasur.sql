@@ -1,3 +1,19 @@
+-- Justificación con medidas propias del Laboratorio 5:
+-- Evidencias 03-tipos-indice, 05-sargabilidad y 06-indices.
+-- UX_CLI_DNI: búsqueda de DNI de 1486 a 3 lecturas; rechaza duplicados.
+-- IX_PED_CLI_FEC_CUB: historial de 15 a 3 lecturas; evita ordenar y acceder a la tabla.
+-- IX_PED_CLIENTE: se retira porque su clave es prefijo del nuevo índice cubriente.
+-- IX_PED_PENDIENTES: 20000 entradas, 54 hojas y 0,5 MB frente a 24 MB del índice general.
+-- IX_PED_CP: consulta reescrita de 5232 a 106 lecturas.
+-- IX_PED_IMPORTE: sin uso en la carga observada; prueba INVISIBLE sin afectar Q2.
+-- IX_PED_FECHA: utilizado en Q2, Q8 y Q9, con 323, 2725 y 12 lecturas en evidencia 06.
+-- PK_PEDIDO y PK_CLIENTE: conservan la unicidad de los identificadores.
+-- UX_CLI_EMAIL: consulta reescrita resuelta con 4 lecturas en evidencia 05.
+-- IX_CLI_PAIS_CIUDAD: 103 lecturas con ambas columnas y 144 con SKIP SCAN.
+-- Coste por INSERT: 10,1 bloques/fila inicialmente, 20,2 con la propuesta y 12,1 con V005.
+-- UPDATE de estado: V005 requiere 8,1 bloques/fila frente a 2 del diseño inicial.
+-- Estas medidas justifican el compromiso entre consultas y mantenimiento.
+--
 -- database/migrations/V005__indices_tiendasur.sql
 -- El diseño de índices de TiendaSur que sale del protocolo de cinco preguntas (Lab 5, Parte G; Actividad 3.2):
 --   + ux_cli_dni          Q13 (500/s): busca por DNI y además GARANTIZA que no se repite (antes lo controlaba la aplicación)
